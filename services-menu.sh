@@ -1,29 +1,4 @@
 #!/bin/bash
-
-while true; do
-    echo "==============================="
-    echo "       Menú de Servicios"
-    echo "==============================="
-    echo "1) Listar contenido de un fichero (directorio)"
-    echo "2) Crear un archivo de texto con una línea"
-    echo "3) Comparar dos archivos de texto"
-    echo "4) Mostrar uso básico del comando 'awk'"
-    echo "5) Mostrar uso básico del comando 'grep'"
-    echo "6) Salir"
-    echo -n "Elige una opción: "
-    read opcion
-
-    case $opcion in
-        1) listar_directorio ;;
-        2) crear_archivo ;;
-        3) comparar_archivos ;;
-        4) uso_awk ;;
-        5) uso_grep ;;
-        6) exit 0 ;;
-        *) echo "Opción no válida. Inténtalo de nuevo." ;;
-    esac
-done
-
 listar_directorio() {
     echo -n "Introduce la ruta absoluta del directorio: "
     read directorio
@@ -85,3 +60,27 @@ uso_grep() {
         echo "El archivo no existe."
     fi
 }
+
+while true; do
+    echo "==============================="
+    echo "       Menú de Servicios"
+    echo "==============================="
+    echo "1) Listar contenido de un fichero (directorio)"
+    echo "2) Crear un archivo de texto con una línea"
+    echo "3) Comparar dos archivos de texto"
+    echo "4) Mostrar uso básico del comando 'awk'"
+    echo "5) Mostrar uso básico del comando 'grep'"
+    echo "6) Salir"
+    echo -n "Elige una opción: "
+    read opcion
+
+    case $opcion in
+        1) listar_directorio ;;
+        2) crear_archivo ;;
+        3) comparar_archivos ;;
+        4) uso_awk ;;
+        5) uso_grep ;;
+        6) exit 0 ;;
+        *) echo "Opción no válida. Inténtalo de nuevo." ;;
+    esac
+done
